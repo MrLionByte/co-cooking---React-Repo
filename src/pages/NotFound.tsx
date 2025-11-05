@@ -2,26 +2,27 @@ import { Link } from 'react-router-dom';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
-      <div className="mx-auto max-w-max">
-        <main className="sm:flex">
-          <p className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-5xl">404</p>
-          <div className="sm:ml-6">
-            <div className="sm:border-l sm:border-gray-200 sm:pl-6">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page not found</h1>
-              <p className="mt-1 text-base text-gray-500">Please check the URL in the address bar and try again.</p>
-            </div>
-            <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-              <Link
-                to="/"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Go back home
-              </Link>
-            </div>
-          </div>
-        </main>
+    <div className="min-h-screen w-full flex flex-col items-center justify-center text-center relative">
+      <div className="text-[120px] font-extrabold text-white flex items-center gap-4">
+        <span>4</span>
+
+        <div className="relative w-24 h-32 flex items-center justify-center animate-wiggle">
+          <div className="absolute w-full h-full bg-white rounded-full rotate-12"></div>
+          <div className="absolute w-14 h-14 bg-yellow-400 rounded-full shadow-md"></div>
+        </div>
+
+        <span>4</span>
       </div>
+
+      <p className="text-white text-xl font-semibold mt-2">Oops! This link cracked 🍳</p>
+      <p className="text-white opacity-80 mb-8">Looks like the recipe you're searching for isn't here.</p>
+
+      <Link
+        to="/"
+        className="px-6 py-3 bg-[#ff6f6f] hover:bg-[#ff5454] text-white font-medium rounded-full shadow-md transition-all"
+      >
+        GO HOME
+      </Link>
     </div>
   );
 }
